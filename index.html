@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de Energia - V1</title>
+</head>
+<body>
+
+    <h2>Conversor de Energia (Versão Funcional)</h2>
+    
+    <div>
+        <label>Valor:</label>
+        <input type="number" id="amount" placeholder="Ex: 100">
+    </div>
+    
+    <div>
+        <label>De:</label>
+        <select id="fromUnit">
+            <option value="J">Joule (J)</option>
+            <option value="cal">Caloria (cal)</option>
+            <option value="kWh">Quilowatt-hora (kWh)</option>
+            <option value="BTU">BTU</option>
+        </select>
+    </div>
+
+    <div>
+        <label>Para:</label>
+        <select id="toUnit">
+            <option value="J">Joule (J)</option>
+            <option value="cal">Caloria (cal)</option>
+            <option value="kWh">Quilowatt-hora (kWh)</option>
+            <option value="BTU">BTU</option>
+        </select>
+    </div>
+
+    <button onclick="convertEnergy()">Calcular Conversão</button>
+
+    <h3 id="resultBox"></h3>
+
+    <script>
+    function convertEnergy() {
+        const amount = parseFloat(document.getElementById('amount').value);
+        const from = document.getElementById('fromUnit').value;
+        const to = document.getElementById('toUnit').value;
+        const resultBox = document.getElementById('resultBox');
+
+        if (isNaN(amount)) {
+            resultBox.innerText = 'Por favor, insira um número.';
+            return;
+        }
+
+        // LÓGICA DE CONVERSÃO (Conversão usando Joule como âncora)
+        const toJoule = { J: 1, cal: 4.184, kWh: 3600000, BTU: 1055.06 };
+        const fromJoule = { J: 1, cal: 1 / 4.184, kWh: 1 / 3600000, BTU: 1 / 1055.06 };
+
+        const joules = amount * toJoule[from];
+        const converted = joules * fromJoule[to];
+
+        resultBox.innerText = amount + ' ' + from + ' = ' + converted.toFixed(4) + ' ' + to;
+    }
+    </script>
+</body>
+</html>
