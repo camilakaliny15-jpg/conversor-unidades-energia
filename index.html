@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Unidades de Energia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚡ Conversor de Energia</h1>
+        <p>Desenvolvido de forma colaborativa</p>
+        
+        <div class="input-group">
+            <label for="valor">Valor:</label>
+            <input type="number" id="valor" value="1" placeholder="Digite o valor...">
+        </div>
+
+        <div class="input-group">
+            <label for="de">De:</label>
+            <select id="de">
+                <option value="J">Joule (J)</option>
+                <option value="kJ">Quilojoule (kJ)</option>
+                <option value="cal">Caloria (cal)</option>
+                <option value="kcal">Quilocaloria (kcal)</option>
+                <option value="Wh">Watt-hora (Wh)</option>
+                <option value="kWh">Quilowatt-hora (kWh)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="para">Para:</label>
+            <select id="para">
+                <option value="J">Joule (J)</option>
+                <option value="kJ">Quilojoule (kJ)</option>
+                <option value="cal" selected>Caloria (cal)</option>
+                <option value="kcal">Quilocaloria (kcal)</option>
+                <option value="Wh">Watt-hora (Wh)</option>
+                <option value="kWh">Quilowatt-hora (kWh)</option>
+            </select>
+        </div>
+
+        <button id="btn-converter">Converter</button>
+
+        <div class="resultado">
+            <h3>Resultado:</h3>
+            <span id="resultado-texto">4.184 cal</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
