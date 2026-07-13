@@ -3,8 +3,8 @@
 Projeto de software web desenvolvido colaborativamente para fins acadêmicos. O sistema permite realizar a conversão de diversas grandezas de energia em tempo real, rodando puramente no lado do cliente (frontend).
 
 ## 👥 Integrantes e Usuários GitHub
-*   **Seu Nome Completo** - GitHub: `@seu-usuario`
-*   **Nome da sua Colega** - GitHub: `@usuario-da-colega`
+*   **Camila Kaliny** - GitHub: `camilakaliny15-jpg`
+*   **Vitoria Freitas** - GitHub: `vitoriafreitast`
 
 ## 🚀 Funcionalidades e Escopo do Tema
 O sistema realiza a conversão dinâmica entre as seguintes unidades:
